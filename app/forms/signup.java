@@ -1,7 +1,5 @@
 package forms;
 
-
-import com.sun.org.apache.xpath.internal.operations.String;
 import models.User;
 import play.data.validation.Constraints;
 import play.data.validation.ValidationError;
@@ -14,6 +12,7 @@ import java.util.List;
  * Created by lubuntu on 8/20/16.
  */
 public class signup {
+
     @Constraints.Required
     public String email;
     @Constraints.Required
