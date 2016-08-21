@@ -3,9 +3,7 @@ package models;
 
 import com.avaje.ebean.Model;
 import org.mindrot.jbcrypt.BCrypt;
-
 import javax.persistence.*;
-import javax.validation.constraints.AssertFalse;
 import java.util.List;
 import java.util.Set;
 
@@ -53,6 +51,10 @@ public class User extends Model{
             return user;
         }
             return null;
+    }
+    public User(String email,String password){
+        this.email=email;
+        this.password=BCrypt.hashpw(password,BCrypt.gensalt());
     }
 
 }
