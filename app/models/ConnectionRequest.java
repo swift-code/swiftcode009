@@ -24,10 +24,13 @@ public class ConnectionRequest extends Model {
 
     public Status status;
 
-    public enum Status{
+    public enum Status {
         @EnumValue(value = "WAITING")
         WAITING,
         @EnumValue(value = "ACCEPTED")
         ACCEPTED
     }
-}
+
+        public static Finder<Long,ConnectionRequest> find = new Finder<Long,ConnectionRequest>(ConnectionRequest.class);
+    }
+
